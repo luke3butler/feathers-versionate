@@ -75,6 +75,12 @@ usersV2.find().then(items => console.log('.find()', items));
 
 ## Release History
 
+__0.2.0__
+
+- Add app.versionate as main function
+- Add tests
+- Fix app.versionate nesting of service access methods
+
 __0.1.0__
 
 - Initial release
