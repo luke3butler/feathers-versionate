@@ -24,15 +24,11 @@ const service = function (name, basePath, subItem = false) {
     service
   };
 
-  // Nest object within `vs` if flag set to true
-  if (subItem === true) {
-    newService = {
-      versionate: newService
-    };
-  }
-
-  // Return the new service's function methods
-  return newService;
+  // Return new service methods
+  return (subItem === true)
+    // Nest under versionate if flag set to true
+    ? { versionate: newService } 
+    : newService;
 }
 
 module.exports = function () {
