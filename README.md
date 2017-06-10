@@ -26,6 +26,8 @@ app.configure(versionate());
 app.versionate.register('v2', '/api/v2/');
 // Now you can use `app.v2` to create and access services under the registered path!
 app.v2.use('/users', memory); // http://localhost:3030/api/v2/users
+// We can access services easily too!
+const userService = app.v2.service('/users');
 ```
 
 ## Documentation

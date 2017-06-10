@@ -1,9 +1,13 @@
 {
   "name": "feathers-versionate",
   "description": "feathersjs service nesting utility",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luke3butler/feathers-versionate.git"
+  },
   "dependencies": {
     "uberproto": "^1.2.0"
   }
