@@ -1,0 +1,10 @@
+{
+  "name": "feathers-versionate",
+  "description": "feathersjs service nesting utility",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "uberproto": "^1.2.0"
+  }
+}
