@@ -32,7 +32,7 @@ const userService = app.v2.service('users');
 
 ## Documentation
 
-`feathers-versionate` is just a wrapper around app.use and app.service for applying
+`feathers-versionate` It a utility that creates wrappers for app.use and app.service with nested root paths.
 
 * `app.versionate(name, basePath)`
 * `app.versionate.register(name, basePath)` (app.versionate alias)
