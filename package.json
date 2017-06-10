@@ -1,7 +1,7 @@
 {
   "name": "feathers-versionate",
   "description": "feathersjs service nesting utility",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "index.js",
   "license": "MIT",
   "repository": {
@@ -10,5 +10,12 @@
   },
   "dependencies": {
     "uberproto": "^1.2.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/ava --verbose"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "feathers": "^2.1.3"
   }
 }
