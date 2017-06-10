@@ -2,8 +2,19 @@
   "name": "feathers-versionate",
   "description": "feathersjs service nesting utility",
   "version": "0.2.0",
+  "keywords": [
+    "feathers",
+    "feathersjs",
+    "services",
+    "nesting",
+    "api"
+  ],
   "main": "index.js",
   "license": "MIT",
+  "author": {
+    "name": "Luke Butler",
+    "email": ""
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/luke3butler/feathers-versionate.git"
@@ -11,8 +22,11 @@
   "dependencies": {
     "uberproto": "^1.2.0"
   },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
   "scripts": {
-    "test": "./node_modules/.bin/ava --verbose"
+    "test": "./node_modules/.bin/ava"
   },
   "devDependencies": {
     "ava": "^0.19.1",
