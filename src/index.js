@@ -38,15 +38,15 @@ const service = function (name, basePath, subItem = false) {
 module.exports = function () {
   return function () {
     const app = this;
-    Proto.mixin({
-      versionate: {
-        register: function () {
-          // Create new service
-          const newService = service.apply(app, Array.from(arguments));
-          // Add new service access method to app
-          Proto.mixin(newService, app)
-        }
-      }
-    }, app)
+    // Main versionate function
+    const versionate = function () {
+      // Create new service
+      const newService = service.apply(app, Array.from(arguments));
+      // Add new service access method to app
+      Proto.mixin(newService, app);
+    }
+    versionate.register = versionate; // retain original syntax
+    // Add versionate to app
+    Proto.mixin({ versionate }, app);
   }
 }
