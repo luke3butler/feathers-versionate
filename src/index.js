@@ -1,18 +1,18 @@
 'use strict';
-const path = require('path');
+const path = require('upath');
 const Proto = require('uberproto');
 
 const service = function (name, basePath, subItem = false) {
   const app = this;
 
-  // Relay use to app.use with basePath applied  
+  // Relay use to app.use with basePath applied
   const use = function () {
     const args = Array.from(arguments);
     const subPath = args.shift();
     app.use(path.join(basePath, subPath), ...args);
   }
 
-  // Relay service to app.service with basePath applied  
+  // Relay service to app.service with basePath applied
   const service = function (subPath) {
     return app.service(path.join(basePath, subPath));
   }
@@ -27,7 +27,7 @@ const service = function (name, basePath, subItem = false) {
   // Return new service methods
   return (subItem === true)
     // Nest under versionate if flag set to true
-    ? { versionate: newService } 
+    ? { versionate: newService }
     : newService;
 }
 
