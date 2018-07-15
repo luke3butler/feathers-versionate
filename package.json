@@ -20,7 +20,8 @@
     "url": "https://github.com/luke3butler/feathers-versionate.git"
   },
   "dependencies": {
-    "uberproto": "^1.2.0"
+    "uberproto": "^1.2.0",
+    "upath": "^1.1.0"
   },
   "engines": {
     "node": ">= 6.0.0"
