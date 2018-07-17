@@ -1,5 +1,5 @@
 'use strict';
-const path = require('path');
+const pathJoin = require('./pathJoin.js');
 const Proto = require('uberproto');
 
 const service = function (name, basePath, subItem = false) {
@@ -9,12 +9,12 @@ const service = function (name, basePath, subItem = false) {
   const use = function () {
     const args = Array.from(arguments);
     const subPath = args.shift();
-    app.use(path.join(basePath, subPath), ...args);
+    app.use(pathJoin(basePath, subPath), ...args);
   }
 
   // Relay service to app.service with basePath applied  
   const service = function (subPath) {
-    return app.service(path.join(basePath, subPath));
+    return app.service(pathJoin(basePath, subPath));
   }
 
   // Create an object that will be added to `app`

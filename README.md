@@ -75,6 +75,10 @@ usersV2.find().then(items => console.log('.find()', items));
 
 ## Release History
 
+__0.2.2__
+
+- Fix/add support for win32 systems
+
 __0.2.0__
 
 - Add app.versionate as main function
